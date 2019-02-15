@@ -96,7 +96,7 @@ public class DividerItemDecoration extends ItemDecoration {
 		}
 	}
 
-//	这个方法能设置recyclerview的item之间的距离，
+//	这个方法能设置recyclerview的item之间的距离，进行设置item的padding距离
 	@Override
 	public void getItemOffsets(Rect outRect, View view, RecyclerView parent,
 							   State state) {
