@@ -63,6 +63,7 @@ public class DividerItemDecoration extends ItemDecoration {
 
 			RecyclerView.LayoutParams params = (LayoutParams) child.getLayoutParams();
 			int left = child.getRight() + params.rightMargin + Math.round(ViewCompat.getTranslationX(child));
+//			getIntrinsicHeight()方法是获取drawable的内部宽度
 			int right = left + mDivider.getIntrinsicHeight();
 //			可以使用Drawable的类进行设置边框颜色，但是直接使用canvas也是可以的，比如下面的方法
 			mDivider.setBounds(left, top , right, bottom);
@@ -95,13 +96,14 @@ public class DividerItemDecoration extends ItemDecoration {
 		}
 	}
 
+//	这个方法能设置recyclerview的item之间的距离，
 	@Override
 	public void getItemOffsets(Rect outRect, View view, RecyclerView parent,
 							   State state) {
 		//1.调用此方法（首先会先获取条目之间的间隙宽度---Rect矩形区域）
 		// 获得条目的偏移量(所有的条目都回调用一次该方法)
 		if(mOrientation == LinearLayoutManager.VERTICAL){//垂直
-			outRect.set(0, 0, 0, mDivider.getIntrinsicHeight());
+			outRect.set(0, 0, 0, 2);
 		}else{//水平
 			outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0 );
 		}

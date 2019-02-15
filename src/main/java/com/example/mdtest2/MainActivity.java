@@ -67,7 +67,9 @@ public class MainActivity extends Activity {
 			recylerview.addItemDecoration(decor);
 		}else{
 			recylerview.setLayoutManager(new LinearLayoutManager(this));//默认垂直
+//            自定义item的分割线
 			decor = new DividerItemDecoration(this, LinearLayoutManager.VERTICAL);
+//			设置分隔线
 			recylerview.addItemDecoration(decor);
 		}
 		isGrid = !isGrid;
